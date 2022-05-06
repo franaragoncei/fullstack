@@ -1,0 +1,103 @@
+html, body {
+	background: -webkit-linear-gradient(top, #4a4a4a, #333);
+}
+
+h2 {
+	font-size: 24px;
+	margin: 6px 15px;
+	color: #ffffff;
+}
+
+.form {
+	margin: 6px 15px;
+}
+
+label {
+	color: #fff;
+}
+
+.mosaico {
+	min-height: 200px;
+}
+
+/* ESTILOS DE PLUGIN ----------------------*/
+.jqMosaic {
+	padding: 10px 10px;
+}
+
+.jqMosaic a {
+	border: 5px solid #f1f1f1;
+	margin: 6px 6px;
+	border-radius: 2px;
+	display: inline-block;
+	background: #dbdbdb;
+	opacity: 0;
+	position: relative;
+	-webkit-transition: all .5s;
+}
+
+.jqMosaic a img {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100%;
+	z-index: 1;
+}
+
+/*title info image*/
+.jqMosaic a div h4 {
+	margin: 10% auto;
+	display: table;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/*display info content animation fade*/
+.jqMosaic a div.fademosaic {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	z-index: 2;
+	opacity: 0;
+}
+
+.jqMosaic a div.fademosaic:hover {
+	opacity: 1;
+	transition: all .5s;
+}
+
+/*display info content animation fade*/
+.jqMosaic a div.downmosaic {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 0%;
+	background: rgba(0, 0, 0, .5);
+	z-index: 2;
+	overflow: hidden;
+	transition: all 1.5s;
+	-webkit-transition: all .5s;
+}
+
+.jqMosaic a:hover div.downmosaic {
+	height: 100% !important;
+}
+
+/* FIN ESTILOS DEL PLUGIN -----------------*/
+
+#crearCarrusel {
+	display: block;
+	margin: 0 auto;
+	margin-top: 1rem;
+}
+
+#numeros{
+	display: block;
+	margin: 0 auto;
+	margin-top: 1rem;
+}
