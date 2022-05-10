@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="empezar">Empezar</button>
+    <p id="numero">0</p>
+    <button id="parar">Parar</button>
+    <script>
+        // console.log('hola');
+        // setTimeout(function(){
+        //     console.log('caracola')
+        // }, 0)
+        // console.log('adios');
+        // function saludos(nombre, rol){
+        //     console.log('Hola, mi nombre es: ' + nombre);
+        //     console.log('Yo soy ' + rol);
+        // }
+
+        // setTimeout(saludos, 3000, 'Fran', 'Programador')
+
+        var empezar = document.getElementById('empezar')
+        var parar = document.getElementById('parar')
+        var numero = document.getElementById('numero')
+        var contador = 0
+        var timeOut
+        var estaEncendido = 0
+
+        function contar(){
+            numero.innerHTML = contador
+            contador++
+            timeOut = setTimeout(contar, 1000)
+        }
+
+        empezar.addEventListener('click', function(){
+            if(estaEncendido == 0){
+                estaEncendido = 1
+                contar()
+            }else{
+                alert('YA ESTA ENCENDIDO')
+            }
+        })
+
+        parar.addEventListener('click', function(){
+            estaEncendido = 0
+            clearTimeout(timeOut)
+        })
+    </script>
+</body>
+
+</html>
