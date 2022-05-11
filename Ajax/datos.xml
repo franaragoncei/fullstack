@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEST>
+  <PERSONA>
+    <NOMBRE>Fran</NOMBRE>
+    <APELLIDO>Aragon</APELLIDO>
+    <EDAD>23</EDAD>
+    <GENERO>Hombre</GENERO>
+  </PERSONA>
+
+  <PERSONA>
+    <NOMBRE>Victor</NOMBRE>
+    <APELLIDO>Aragon</APELLIDO>
+    <EDAD>25</EDAD>
+    <GENERO>Hombre</GENERO>
+  </PERSONA>
+  
+  <PERSONA>
+    <NOMBRE>Alberto</NOMBRE>
+    <APELLIDO>Aragon</APELLIDO>
+    <EDAD>17</EDAD>
+    <GENERO>Hombre</GENERO>
+  </PERSONA>
+</TEST>
