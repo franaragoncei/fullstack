@@ -1,5 +1,5 @@
 var datos = new XMLHttpRequest()
-datos.open('GET', 'datos.xml')
+datos.open('GET', 'test.txt')
 datos.send()
 
 console.log(datos);
