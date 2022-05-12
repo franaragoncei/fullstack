@@ -5,9 +5,11 @@ datos.send()
 console.log(datos);
 
 document.getElementById('boton').addEventListener('click', function(){
-    var persona = datos.responseXML.getElementsByTagName('NOMBRE')
+    // var persona = datos.responseXML.getElementsByTagName('NOMBRE')
 
-    console.log(persona[0].innerHTML);
+    console.log(datos.responseText.split(' '));
 
-    console.log(persona);
+    // console.log(persona[0].innerHTML);
+
+    // console.log(persona);
 })
