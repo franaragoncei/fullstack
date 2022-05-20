@@ -1,12 +1,15 @@
 const express = require('express')
 const { miHorario } = require('./db/db')
-
+const bodyParser = require('body-parser')
 const db = require('./db/db')
+const cors = require('cors')
 
 const app = express()
-
-const bodyParser = require('body-parser')
-
+app.use(cors({
+    origin: true,
+    methods: ['GET', 'POST'],
+    credentials: true
+}))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
