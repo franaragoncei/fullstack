@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        input {
+            margin: .5rem;
+        }
+
+        button,
+        a {
+            padding: .5rem 1rem;
+            background-color: lightblue;
+            border: 2px solid lightcoral;
+            border-radius: 12px;
+            margin: .5rem;
+            text-decoration: none;
+            color: lightcoral;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AÑADIR PELÍCULAS AL VIDEOCLUB</h1>
+    <input placeholder="Introduce el título" type="text" id="titulo">
+    <input placeholder="Introduce la descripción" type="text" id="description">
+    <input placeholder="Introduce el año" type="number" id="year">
+    <input placeholder="Introduce la carátula" type="url" id="caratula">
+    <button id="insertarPelicula">Insertar</button>
+    <p id="respuesta"></p>
+    <a href="index.html">Volver al home</a>
+    <script src="insertarPelicula.js"></script>
+</body>
+
+</html>
