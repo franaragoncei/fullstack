@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="jquery-3.6.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        li {
+            cursor: pointer;
+            /* display: none; */
+        }
+
+        div#popup {
+            background-color: lightblue;
+            position: fixed;
+            width: 20rem;
+            height: 20rem;
+            top: 20vh;
+            left: 15vw;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button id="boton">CLICAME</button>
+    <p class="parrafo">SOY UN PARRAFO Y ME OCULTO Y ME MUESTRO</p>
+    <div>
+        <div>
+            <span>HOLA</span>
+        </div>
+    </div>
+
+    <p class="seleccionada">HOLA DE NUEVO</p>
+    <p>DE NUEVO</p> -->
+    <button id="ocultar">OCULTAR</button>
+    <button id="mostrar">MOSTRAR</button>
+    <button id="mostrarOcultar">OCULTA Y MUESTRA</button>
+    <button id="btnPopUp">POPUP</button>
+    <ul id="lista">
+        <li>UNO</li>
+        <li>DOS</li>
+        <li>TRES</li>
+        <li>CUATRO</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quia cum voluptas explicabo veritatis ducimus
+        quibusdam incidunt doloremque perferendis beatae! Minus asperiores aliquam illo, nostrum sapiente culpa nesciunt
+        fuga neque.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nihil sint odit. Facilis,
+        consequatur quisquam exercitationem deleniti harum corrupti itaque amet labore placeat impedit dignissimos
+        architecto deserunt reiciendis repellendus accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Tempore excepturi alias laborum! Similique, quos explicabo labore quas numquam aperiam asperiores repellat!
+        Asperiores similique enim corporis exercitationem, adipisci temporibus incidunt tenetur. Lorem ipsum dolor sit
+        amet consectetur, adipisicing elit. Alias rerum expedita, officia magnam, omnis delectus, nisi ullam soluta ad
+        hic natus doloremque nobis excepturi cum eius voluptatem suscipit vel quos. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Saepe asperiores vero amet adipisci officiis harum facilis, cupiditate culpa non.
+        Accusantium maxime odio quis nesciunt saepe, officia magnam aut atque odit? Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Corporis doloribus optio similique aut necessitatibus quo, facilis minima esse
+        suscipit modi eveniet expedita magni quod cum? Enim omnis esse nihil hic? Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Amet earum minus blanditiis expedita, deserunt illum, vel neque fuga hic fugiat,
+        possimus nulla magnam explicabo numquam animi. Vitae magni exercitationem culpa. Lorem, ipsum dolor sit amet
+        consectetur adipisicing elit. Aut maiores recusandae, repudiandae commodi atque vero accusamus voluptatem facere
+        reiciendis voluptas eum, ipsum accusantium eaque totam veniam laudantium debitis, harum suscipit? Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Eveniet nisi distinctio velit tempora corrupti perspiciatis amet
+        exercitationem unde commodi perferendis fugit, ipsam at et accusantium ex aliquid, quos repudiandae consectetur?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat labore unde harum laudantium consectetur,
+        ullam dicta asperiores, cum incidunt quam fugit aut voluptate sunt commodi, ea voluptas illum vitae ipsum.
+    </p>
+    <div id="popup">
+        <button>X</button>
+        <h1>COMPRAME</h1>
+    </div>
+    <script>
+        // $(function(){
+
+        // })
+        $(document).ready(function () {
+            $('#mostrarOcultar').click(function () {
+                $('ul').toggle(6000)
+            })
+
+            $('#btnPopUp').click(function () {
+                $('#popup').show('slow')
+            })
+
+            $('#popup>button').click(function(){
+                $('#popup').hide('slow')
+            })
+
+            $('#ocultar').click(function () {
+                $('ul').hide('fast')
+            })
+
+            $('#mostrar').click(function () {
+                $('ul').show(5000)
+            })
+
+
+            $('li').hover(
+                function () {
+                    $(this).css('color', 'red')
+                },
+                function () {
+                    $(this).css('color', 'black')
+                }
+            )
+            // $('#lista>li').first().css('color', 'green')
+
+            // $('#lista>li').last().css('color', 'red')
+
+            // $('#tres').next().css('color', 'blue')
+
+
+
+            // $('li#tres').siblings().css('color', 'blue')
+
+            // $('span').parent().css('background-color', 'yellow')
+
+
+            // $('div').siblings().css('color', 'red')
+            // $('#boton').click(function () {
+            //     //   $('.parrafo').toggle('fast')
+            //     $('.parrafo').css({
+            //         'color': 'red',
+            //         'font-size': '2rem',
+            //         'transform': 'rotate(180deg)'
+            //     })
+            // })
+        })
+    </script>
+</body>
+
+</html>

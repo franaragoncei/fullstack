@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" type="text/javascript"></script>
+    <style>
+        div {
+            width: 80vw;
+            height: 20vh;
+            margin: 1rem;
+            display: none;
+        }
+
+        #uno{
+            background-color: lightcoral;
+        }
+
+        #dos{
+            background-color: lightblue;
+        }
+
+        #tres{
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">FADE IN</button>
+    <button id="btn2">FADE OUT</button>
+    <button id="btn3">FADE TOGGLE</button>
+    <div id="uno"></div>
+    <div id="dos"></div>
+    <div id="tres"></div>
+
+    <script>
+        $(function () {
+            // $('#btn2').click(function(){
+            //     $('div').fadeOut(4000)
+            // })
+            // $('div').fadeIn(2000)
+            $('#btn1').click(function(){
+                $('#uno').fadeTo(3000, 1, function(){
+                    $('#dos').fadeTo(3000, 1, function(){
+                        $('#tres').fadeTo(3000, 1)
+                    })
+                })
+            })
+
+            $('#btn3').click(function(){
+                $('#uno').stop()
+                $('#uno').fadeToggle()
+            })
+        })
+    </script>
+</body>
+
+</html>
